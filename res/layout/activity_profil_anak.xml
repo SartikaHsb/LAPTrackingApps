@@ -1,0 +1,1312 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".ProfilAnakActivity" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" >
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="onClick"
+                android:scaleType="fitXY"
+                android:src="@drawable/btn_back" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00ADEF"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="14dp"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+                android:text="FORMULIR PROFIL ANAK"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            style="@style/scrollbar_bitmap_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="10" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.75" />
+
+                    <ImageView
+                        android:id="@+id/tambahfoto"
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="3"
+                        android:background="@android:color/transparent"
+                        android:onClick="onClick"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/tambah_foto" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.75" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="NAMA ANAK"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:text=":"
+                        android:textColor="@color/blue" />
+
+                    <EditText
+                        android:id="@+id/edit_nama_anak"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="TANGGAL LAHIR"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:text=":"
+                        android:textColor="@color/blue" />
+
+                    <EditText
+                        android:id="@+id/editTextTtl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:ems="10"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="JENIS KELAMIN"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text=":"
+                        android:textColor="@color/blue" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGenderGroup"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/radioButtonLakilaki"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="LAKI - LAKI"
+                            android:textColor="#00adef"
+                            android:textSize="12sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButtonPerempuan"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:checked="true"
+                            android:text="PEREMPUAN"
+                            android:textColor="#00adef"
+                            android:textSize="11sp" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="GOLONGAN DARAH"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:text=":"
+                        android:textColor="@color/blue" />
+
+                    <Spinner
+                        android:id="@+id/spinner_golongandarah"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="STATUS ARV"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text=":"
+                        android:textColor="@color/blue" />
+
+                    <Spinner
+                        android:id="@+id/spinner_statusobat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+<!--                     <TextView -->
+<!--                         android:id="@+id/textView12" -->
+<!--                         android:layout_width="0dp" -->
+<!--                         android:layout_height="wrap_content" -->
+<!--                         android:layout_weight="2" -->
+<!--                         android:text="JENIS ARV" -->
+<!--                         android:textColor="@color/blue" /> -->
+
+<!--                     <TextView -->
+<!--                         android:id="@+id/textView13" -->
+<!--                         android:layout_width="0dp" -->
+<!--                         android:layout_height="wrap_content" -->
+<!--                         android:layout_weight="0.5" -->
+<!--                         android:text=":" -->
+<!--                         android:textColor="@color/blue" /> -->
+
+<!--                     <Spinner -->
+<!--                         android:id="@+id/spinner_jenisobat" -->
+<!--                         android:layout_width="0dp" -->
+<!--                         android:layout_height="wrap_content" -->
+<!--                         android:layout_weight="1.5" /> -->
+
+<!--                     <TextView -->
+<!--                         android:id="@+id/textView14" -->
+<!--                         android:layout_width="0dp" -->
+<!--                         android:layout_height="wrap_content" -->
+<!--                         android:layout_weight="1" -->
+<!--                         android:text="DOSIS :" -->
+<!--                         android:textColor="@color/blue" /> -->
+
+<!--                     <Spinner -->
+<!--                         android:id="@+id/spinner_dosisobat" -->
+<!--                         android:layout_width="0dp" -->
+<!--                         android:layout_height="wrap_content" -->
+<!--                         android:layout_weight="1.5" /> -->
+                    <TextView
+                            android:id="@+id/tvtambah_jenis_arv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:onClick="onClick"
+                            android:text="Tambah Jenis ARV"
+                            android:textColor="@color/blue"
+                            android:textStyle="italic" />
+                </LinearLayout>
+                
+                <!--         pilihan obat pertama -->
+        <LinearLayout
+            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:orientation="horizontal" 
+            android:id="@+id/linArv1"
+            android:visibility="invisible"
+            >
+
+            <TextView
+                android:id="@+id/arv1"
+                android:layout_width="85dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Jenis ARV1"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/dos_pagi1"
+                android:layout_width="85dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="Dosis Pagi1"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/dos_malam1"
+                android:layout_width="85dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Dosis Malam1"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+        </LinearLayout>
+        
+        <!--         pilihan obat kedua -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:orientation="horizontal"
+             android:id="@+id/linArv2"
+             android:visibility="invisible"
+            >
+
+            <TextView
+                android:id="@+id/arv2"
+                android:layout_width="85dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Jenis ARV2"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/dos_pagi2"
+                android:layout_width="85dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="Dosis Pagi2"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/dos_malam2"
+                android:layout_width="85dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Dosis Malam2"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+        </LinearLayout>
+        
+        
+        <!--         pilihan obat ketiga -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:orientation="horizontal" 
+             android:id="@+id/linArv3"
+             android:visibility="invisible"
+            >
+
+            <TextView
+                android:id="@+id/arv3"
+                android:layout_width="85dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Jenis ARV"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/dos_pagi3"
+                android:layout_width="85dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="Dosis Pagi"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/dos_malam3"
+                android:layout_width="85dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Dosis Malam"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+        </LinearLayout>
+        
+        <!--         pilihan obat keempat -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:orientation="horizontal"
+             android:id="@+id/linArv4"
+             android:visibility="invisible"
+             >
+
+            <TextView
+                android:id="@+id/arv4"
+                android:layout_width="85dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Jenis ARV"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/dos_pagi4"
+                android:layout_width="85dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="Dosis Pagi"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/dos_malam4"
+                android:layout_width="85dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Dosis Malam"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+        </LinearLayout>
+        
+        <!--         pilihan obat kelima -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:orientation="horizontal" 
+             android:id="@+id/linArv5"
+             android:visibility="invisible"
+             
+            >
+
+            <TextView
+                android:id="@+id/arv5"
+                android:layout_width="85dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Jenis ARV"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/dos_pagi5"
+                android:layout_width="85dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="Dosis Pagi"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/dos_malam5"
+                android:layout_width="85dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Dosis Malam"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="NAMA AYAH"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text=":"
+                        android:textColor="@color/blue" />
+
+                    <EditText
+                        android:id="@+id/edit_namaayah"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="STATUS AYAH"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:text=":"
+                        android:textColor="@color/blue" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:orientation="vertical" >
+
+                        <RadioGroup
+                            android:id="@+id/radioStatusayahgroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/radioButtonHidup"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:checked="true"
+                                android:text="HIDUP"
+                                android:textColor="#00adef"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/radioButtonMeninggal"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:text="MENINGGAL"
+                                android:textColor="#00adef"
+                                android:textSize="12sp" />
+
+                        </RadioGroup>
+
+                        <RadioGroup
+                            android:id="@+id/radioStatusayah"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/radioButtonAyahPositif"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:text="POSITIF"
+                                android:textColor="#00adef"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/radioButtonAyahNegatif"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:checked="true"
+                                android:text="NEGATIF"
+                                android:textColor="#00adef"
+                                android:textSize="12sp" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="NAMA IBU"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text=":"
+                        android:textColor="@color/blue" />
+
+                    <EditText
+                        android:id="@+id/edit_namaibu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="STATUS IBU"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:text=":"
+                        android:textColor="@color/blue" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:orientation="vertical" >
+
+                        <RadioGroup
+                            android:id="@+id/radioStatusibugroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/radioButtonIbuHidup"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:checked="true"
+                                android:text="HIDUP"
+                                android:textColor="#00adef"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/radioButtonIbuMeninggal"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:text="MENINGGAL"
+                                android:textColor="#00adef"
+                                android:textSize="12sp" />
+
+                        </RadioGroup>
+
+                        <RadioGroup
+                            android:id="@+id/radioStatusibu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/radioButtonIbuPositif"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:text="POSITIF"
+                                android:textColor="#00adef"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/radioButtonIbuNegatif"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:checked="true"
+                                android:text="NEGATIF"
+                                android:textColor="#00adef"
+                                android:textSize="12sp" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="NAMA PENGASUH"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:text=":"
+                        android:textColor="@color/blue" />
+
+                    <EditText
+                        android:id="@+id/edit_caregiver_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="PENGASUH"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text=":"
+                        android:textColor="@color/blue" />
+
+                    <Spinner
+                        android:id="@+id/spinner_caregiver"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="ALAMAT"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text=":"
+                        android:textColor="@color/blue" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:orientation="vertical" >
+
+                        <EditText
+                            android:id="@+id/edit_alamat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:textColor="@color/black" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:id="@+id/textView29"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="KOTAMADYA :"
+                                    android:textColor="@color/blue" />
+
+                                <Spinner
+                                    android:id="@+id/spinner_kotamadya"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:id="@+id/textView30"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="KECAMATAN :"
+                                    android:textColor="@color/blue" />
+
+                                <Spinner
+                                    android:id="@+id/spinner_kecamatan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView31"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="NOMOR TELEPON"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:text=":"
+                        android:textColor="@color/blue" />
+
+                    <EditText
+                        android:id="@+id/edit_telepon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:ems="10"
+                        android:inputType="phone"
+                        android:textColor="@color/black" />
+                   
+                    
+                    <Button
+                        android:id="@+id/button_tambah"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@android:color/transparent"
+                        android:onClick="onClick"
+                        android:text="+"
+                        android:textColor="@color/blue" />
+                </LinearLayout>
+<LinearLayout
+                     android:layout_width="163dp"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="100dp"
+                      android:id="@+id/linPhone1" 
+                     android:visibility="invisible" >
+
+                    <EditText
+                        android:id="@+id/edit_telepon1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:ems="10"
+                        android:inputType="phone"
+                        android:textColor="@color/black" 
+                        android:layout_below="@+id/edit_telepon"
+                        android:layout_alignParentBottom="true"/>
+                    </LinearLayout>
+                    
+                <LinearLayout
+                     android:layout_width="164dp"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="100dp"
+                      android:id="@+id/linPhone2" 
+                     android:visibility="invisible" >
+                     <EditText
+                        android:id="@+id/edit_telepon2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:ems="10"
+                        android:inputType="phone"
+                        android:textColor="@color/black" 
+                        android:layout_below="@+id/edit_telepon1"
+                        android:layout_alignParentBottom="true"/>
+                    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="SEKOLAH"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text=":"
+                        android:textColor="@color/blue" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:orientation="vertical" >
+
+                        <EditText
+                            android:id="@+id/edit_sekolah"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:textColor="@color/black" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:id="@+id/textView35"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="KOTAMADYA :"
+                                    android:textColor="@color/blue" />
+
+                                <Spinner
+                                    android:id="@+id/spinner_kotamadyasekolah"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:id="@+id/textView36"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="KECAMATAN :"
+                                    android:textColor="@color/blue" />
+
+                                <Spinner
+                                    android:id="@+id/spinner_kecamatansekolah"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="2dp" >
+
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="KELAS"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/textView38"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:text=":"
+                        android:textColor="@color/blue" />
+
+                    <Spinner
+                        android:id="@+id/spinner_kelas"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView39"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="FASILITAS"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text=":"
+                        android:textColor="@color/blue" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="2dp" >
+
+                                    <CheckBox
+                                        android:id="@+id/checkBoxSusu"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="3.5"
+                                        android:text="SUSU"
+                                        android:textColor="@color/blue"
+                                        android:textSize="14sp" />
+
+                                    <Button
+                                        android:id="@+id/button_susu"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:onClick="onClick"
+                                        android:background="@android:color/transparent"
+                                        android:text="+"
+                                        android:visibility="invisible"
+                                        android:textColor="@color/blue" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical" >
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent" >
+
+                                        <TextView
+                                            android:id="@+id/textview_susu"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="4"
+                                            android:text="TextView"
+                                            android:textColor="@color/black"
+                                            android:paddingLeft="8dp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="2dp" >
+
+                                    <CheckBox
+                                        android:id="@+id/checkBoxVitamin"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="3.5"
+                                        android:text="VITAMIN"
+                                        android:textColor="@color/blue"
+                                        android:textSize="14sp" />
+
+                                    <Button
+                                        android:id="@+id/button_vitamin"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:onClick="onClick"
+                                        android:text="+"
+                                        android:background="@android:color/transparent"
+                                         android:visibility="invisible"
+                                        android:textColor="@color/blue" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical" >
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent" >
+
+                                        <TextView
+                                            android:id="@+id/textViewVitamin"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="4"
+                                            android:textColor="@color/black"
+                                            android:text="TextView"
+                                            android:paddingLeft="8dp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="2dp" >
+
+                                    <CheckBox
+                                        android:id="@+id/checkBoxPopok"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="3.5"
+                                        android:text="POPOK"
+                                        android:textColor="@color/blue"
+                                        android:textSize="14sp" />
+
+                                    <Button
+                                        android:id="@+id/button_popok"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:onClick="onClick"
+                                        android:text="+"
+                                        android:visibility="invisible"
+                                        android:background="@android:color/transparent"
+                                        android:textColor="@color/blue" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical" >
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent" >
+
+                                        <TextView
+                                            android:id="@+id/textViewPopok"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="4"
+                                            android:textColor="@color/black"
+                                            android:text="TextView"
+                                            android:paddingLeft="8dp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:onClick="onClick"
+            android:background="@drawable/button"
+            android:id="@+id/button_simpanprofil" >
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.25" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:src="@drawable/centang" />
+            
+            <TextView
+                android:id="@+id/simpanprofil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:paddingBottom="18dp"
+                android:paddingTop="18dp"
+                android:text="SIMPAN PROFIL"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+            
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.25" />
+            
+            </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
